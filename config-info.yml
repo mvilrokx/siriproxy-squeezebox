@@ -1,0 +1,10 @@
+#Example configuration options that can be placed in your main SiriProxy config.yml
+
+##########################
+#NOTICE: Modifying these options in this file has no effect. You must put them in SiriProxy's config.yml!
+##########################
+    
+    - name: 'Squeezebox'
+      git: 'git://github.com/mvilrokx/SiriSqueeze.git'
+      host: "localhost"
+      port: "9090"
