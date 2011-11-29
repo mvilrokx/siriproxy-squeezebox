@@ -10,7 +10,7 @@ require 'squeezebox'
 # Remember to add other plugins to the "config.yml" file if you create them!
 ######
 
-class SiriProxy::Plugin::SiriSqueeze < SiriProxy::Plugin
+class SiriProxy::Plugin::Squeezebox < SiriProxy::Plugin
   def initialize(config)
     @s = Squeezebox.new({:host => '192.168.0.168'})
   end
