@@ -6,5 +6,5 @@
     
     - name: 'Squeezebox'
       git: 'git://github.com/mvilrokx/siriproxy-squeezebox.git'
-      host: "localhost"
-      port: "9090"
+      host: 'localhost'
+      port: '9090'
