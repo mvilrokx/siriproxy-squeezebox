@@ -15,6 +15,6 @@ Will turn the player on
 
 Will turn the player off
 
-**Say:** Artist <name>
+**Say:** Artist name
 
-Will start playing songs by <name>
+Will start playing songs by name
