@@ -26,6 +26,13 @@ class SiriProxy::Plugin::Squeezebox < SiriProxy::Plugin
     say "Radio is now turned off!"
     request_completed
   end
+  
+  listen_for /artist (.+)/i do |artist_name|
+    @s.playlist(loadtracks contributor.namesearch=artist_name)
+    say "Playing songs by #{artist_name}"
+    request_completed
+  end
+  
 
 end
 
