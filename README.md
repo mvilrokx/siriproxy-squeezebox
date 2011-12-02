@@ -10,3 +10,11 @@ Simple Squeezebox plugin for SiriProxy
 **Say:** Radio on
 
 Will turn the player on
+
+**Say:** Radio off
+
+Will turn the player off
+
+**Say:** Artist <name>
+
+Will start playing songs by <name>
