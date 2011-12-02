@@ -12,12 +12,14 @@ require 'squeezebox'
 
 class SiriProxy::Plugin::Squeezebox < SiriProxy::Plugin
   def initialize(config)
+    puts 'enter initialize'
     @s = Squeezebox.new(config)
+    puts 'leave initialize'
   end
 
   listen_for /radio on/i do
-    s.power('1')
-    say "Radio now on!"
+    @s.power('1')
+    say "Radio is now turned on!"
     request_completed
   end
   

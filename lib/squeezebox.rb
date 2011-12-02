@@ -5,6 +5,7 @@ $:.unshift(File.join(File.dirname(__FILE__), 'lib'))
 class Squeezebox
 
   def initialize(config = {})
+    puts 'enter initialize in Squeezebox'
     @t = Net::Telnet::new(
       'Host' => config['host']||'localhost',
       'Port' => config['port']||9090,
@@ -13,6 +14,7 @@ class Squeezebox
     @id_set = false
     @id = self.player('id ?')
     @id_set = true
+    puts 'leave initialize in Squeezebox'
   end
 
   def method_missing(method,*args)
