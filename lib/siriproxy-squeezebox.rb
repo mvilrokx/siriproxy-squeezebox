@@ -1,6 +1,6 @@
 require 'cora'
 require 'siri_objects'
-require 'squeezebox'
+require 'squeezeboxer'
 
 #######
 # This is a "hello world" style plugin. It simply intercepts the phrase "text siri proxy" and responds
@@ -12,9 +12,7 @@ require 'squeezebox'
 
 class SiriProxy::Plugin::Squeezebox < SiriProxy::Plugin
   def initialize(config)
-    puts 'enter initialize'
-    @s = Squeezebox.new(config)
-    puts 'leave initialize'
+    @s = Squeezeboxer.new(config)
   end
 
   listen_for /radio on/i do
@@ -23,5 +21,11 @@ class SiriProxy::Plugin::Squeezebox < SiriProxy::Plugin
     request_completed
   end
   
+  listen_for /radio of/i do
+    @s.power('0')
+    say "Radio is now turned off!"
+    request_completed
+  end
+
 end
 
