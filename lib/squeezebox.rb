@@ -6,8 +6,8 @@ class Squeezebox
 
   def initialize(config = {})
     @t = Net::Telnet::new(
-      'Host' => config[:host]||'localhost',
-      'Port' => config[:port]||9090,
+      'Host' => config['host']||'localhost',
+      'Port' => config['port']||9090,
       'Prompt' => /./ # needed to work
     )
     @id_set = false

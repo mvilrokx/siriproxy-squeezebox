@@ -12,7 +12,7 @@ require 'squeezebox'
 
 class SiriProxy::Plugin::Squeezebox < SiriProxy::Plugin
   def initialize(config)
-    @s = Squeezebox.new({:host => '192.168.0.168'})
+    @s = Squeezebox.new(config)
   end
 
   listen_for /radio on/i do
